@@ -1,0 +1,35 @@
+<html>
+<head>
+<script language="javascript">
+var XHobj=false;
+if(window.XMLhttpRequest)
+{
+XHobj = new ActiveXobject("Microsoft.XMLHTTP");
+}
+elseif(window.ActiveXObject)
+{
+XHobj = new ActiveXobject("Microsoft.XMLHTTP");
+function fetchdata(datasourcedivID)
+{
+if(XHobj)
+{
+XHobj.open("GET",datasource);
+XHobj.onreadystatechange=function()
+{
+if(XHobj.readyState==4&&Xhobj.status==200)
+}
+document.getElementById(divID).innerHTML=Xobj.responseText;
+}
+}
+Xobj.send(null);
+}
+</script>
+</head>
+<body>
+<h3>welcome to ajax</h3>
+<form>
+<input type =button value="fetch message" onclick="fetchdata('info.txt','myDiv')">
+<div id ="myDiv"><b>Ajax applications are browser and platform independent.:</b></div>
+</form>
+</body>
+</html>
